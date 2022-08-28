@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        
+        body { font: 12pt Arial; }
+        button { font-size: 12pt; padding: 30px; }
+    
+    </style>
+    <script>
+        function calculos(){
+            let num = window.prompt("Digite um número")
+            num = parseFloat(num)
+            let res = window.document.getElementById('resultados')
+            res.innerHTML = `<p>O número analisado aqui será o <strong>${num}</strong>`
+            res.innerHTML += `<hr>`    
+            res.innerHTML += `<p>O valor absoluto é ${num}`
+            res.innerHTML += `<p>A sua parte inteira é ${Math.round(num)}`
+            res.innerHTML += `<p>O valor inteiro mais próximo é ${Math. round(num)}`
+            res.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(num)}`
+            res.innerHTML += `<p>A sua raiz cúbica é ${Math.cbrt(num)}`
+            res.innerHTML += `<p>O valor de ${num}² é ${num*num}`
+            res.innerHTML += `<p>O valor de ${num}³ é ${num*num*num}`
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="calculos()">Clique para calcular</button>
+    <section id="resultados">
+
+    </section>
+</body>
+</html>
