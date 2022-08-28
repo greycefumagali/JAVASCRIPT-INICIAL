@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Calculando a idade</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+        body { font: 12pt Arial; }
+        h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+        button { font-size: 12pt; padding: 30px; }
+    </style>
+    <script>
+        function calculos(){
+            let ano = window.prompt("Em que ano você nasceu?")
+            let calculo = document.getElementById('idade')
+            calculo.innerHTML = `<p>Quem nasceu em ${ano} vai completar <b>${2022 - ano}</b> anos em 2022.`
+        }    
+    </script>
+</head>
+<body>
+    <h1>Calculando a idade</h1>
+    <button onclick="calculos()">Iniciar</button> 
+    <section id="idade">
+        <p>Aqui vai aparecer algo...</p>   
+    </section>  
+</body>
+</html>
