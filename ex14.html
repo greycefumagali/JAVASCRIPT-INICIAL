@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Interagindo com o sistema</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+        body { font: 12pt Arial; }
+        h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+        button { font-size: 12pt; padding: 30px; } 
+    </style>
+    <script>
+        function informacao(){
+            let today = new Date();
+            let inf = document.getElementById('valores')
+            inf.innerHTML = `<p>O que eu recebi do sistema foi <mark>${today}</mark>`  
+        }
+    </script>
+</head>
+<body>
+    <h1>Interagindo com o sistema</h1>
+    <button onclick="informacao()">Clique em mim</button>
+    <section id="valores">
+        <p>Aqui vai aparecer algo...</p>   
+    </section>   
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=?, initial-scale=1.0">
+    <title>O número é par ou ímpar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+        body { font: 12pt Arial; }
+        h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+        button { font-size: 12pt; padding: 30px; }
+    </style>
+    <script>
+        function resultado(){
+            let numero = window.prompt("Digite um número:")
+            numero = parseFloat(numero)
+            let res = document.getElementById('resposta')
+            if (numero % 2 == 0){
+               res.innerHTML = `<p>O número ${numero} que foi digitado é <b>PAR</b>` 
+            }else{
+                res.innerHTML = `<p>O número ${numero} que foi digitado é <b>ÍMPAR</b>`  
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>É par ou ímpar?</h1> 
+    <button onclick="resultado()">Clique para iniciar</button>
+    <section id="resposta">
+        <p>O resultado vai aparecer aqui...</p>   
+    </section>
+</body>
+</html>
